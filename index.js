@@ -31,6 +31,7 @@ var server;
 var browserProcess;
 var searchLimit = 10;
 var offset = 0;
+var reqCount = 0;
 
 (function init(argument) {
   detectStuff();
@@ -68,7 +69,17 @@ function launchServer() {
     if (isInSearch) {
       offset += searchLimit;
     }
+    writeFeedback();
+    reqCount++;
   })
+}
+
+function writeFeedback() {
+  if (reqCount ===0) {
+    console.log('Check your browser for your dose of gifs and hit refresh the page to load more.')
+  } else {
+    console.log('Want moar? Ok!')
+  }
 }
 
 function writeResponse(response, gifArray) {
