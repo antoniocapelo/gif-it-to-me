@@ -15,9 +15,6 @@ var baseUrlRandom = 'http://api.giphy.com/v1/gifs/random';
 var apiKey = 'dc6zaTOxFJmzC';
 
 // Aux vars
-var scripts = require('./fe');
-var script1 = scripts.onload;
-var script2 = scripts.onbeforeunload;
 var isInSearch;
 var server;
 var browserProcess;
@@ -73,9 +70,8 @@ function writeResponse(response, gifArray) {
   response.write("<body>");
   _.map(gifArray, function(gifsrc) {
     response.write("<img src=\"" + gifsrc + "\"/>");
-  });
+  );
   response.write("<br/>");
-  response.write("<script>window.onload=" + script1 + ";window.onbeforeunload=" + script2 + "</script>");
   response.write("</body>");
   response.write("</html>");
   response.end();
