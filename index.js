@@ -1,7 +1,18 @@
 #!/usr/bin/env node
 
 // requiring modules
-var argv = require('yargs').argv;
+var yargs = require('yargs');
+var argv = yargs
+  .example('$0 "your-search-term"', 'Search the Giphy API for one gif and have the returned gif already copied to your clipboard')
+  .example('$0 "your-search-term" -s', 'Search the Giphy API for a set of gifs')
+  .example('$0 "your-search-term" -s -l=20', 'Search the Giphy API for a set of 20 gifs')
+  .example('Note:', 'Everytime the browser is refreshed, the query is repeated giving you new results' )
+  .alias('s', 'search')
+  .usage("\nGet yourself sum gifs!\n$0 \"your-search-tearm\" --search --limit=10")
+  .describe('s', 'activate search mode (returns a set of gifs instead of single one)')
+  .alias('l', 'limit')
+  .describe('l', 'search limit (default = 10)')
+  .argv;
 var cp = require('copy-paste');
 var _ = require('lodash');
 var request = require('request');
@@ -33,14 +44,15 @@ var offset = 0;
 }());
 
 function detectStuff() {
+  if (!_.size(argv._)) {
+    console.log(yargs.help());
+    process.exit();
+  }
   // check what mode is it in:
   // Normal mode -> random gif given search/tag
   // Search Mode -> set of gifs given search/tag
-  queryTerm = argv.s;
-  isInSearch = queryTerm !== undefined;
-  if (!isInSearch) {
-    queryTerm = argv.r || _.first(argv._);
-  }
+  queryTerm = _.first(argv._);
+  isInSearch = argv.s;
 
   searchLimit = argv.l ? argv.l : searchLimit;
 
@@ -70,8 +82,7 @@ function writeResponse(response, gifArray) {
   response.write("<body>");
   _.map(gifArray, function(gifsrc) {
     response.write("<img src=\"" + gifsrc + "\"/>");
-  );
-  response.write("<br/>");
+  });
   response.write("</body>");
   response.write("</html>");
   response.end();
