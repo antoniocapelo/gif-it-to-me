@@ -2,16 +2,18 @@
 
 // requiring modules
 var yargs = require('yargs');
+var pkg  = require('./package.json');
 var argv = yargs
+  .version(pkg.version, 'v')
   .example('$0 "your-search-term"', 'Search the Giphy API for one gif and have the returned gif already copied to your clipboard')
   .example('$0 "your-search-term" -s', 'Search the Giphy API for a set of gifs')
   .example('$0 "your-search-term" -s -l=20', 'Search the Giphy API for a set of 20 gifs')
-  .example('Note:', 'Everytime the browser is refreshed, the query is repeated giving you new results' )
-  .alias('s', 'search')
-  .usage("\nGet yourself sum gifs!\n$0 \"your-search-tearm\" --search --limit=10")
-  .describe('s', 'activate search mode (returns a set of gifs instead of single one)')
+  .usage("\nGif it to me! \n" + pkg.version + "\n$0 \"your-search-term\" --search --limit=10")
   .alias('l', 'limit')
-  .describe('l', 'search limit (default = 10)')
+  .alias('s', 'search')
+  .alias('v', 'version')
+  .describe('l', 'Set search limit (default = 10)')
+  .describe('s', 'Activate search mode (returns a set of gifs instead of single one)')
   .argv;
 var cp = require('copy-paste');
 var _ = require('lodash');
