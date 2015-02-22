@@ -8,7 +8,7 @@ var argv = yargs
   .example('$0 "your-search-term"', 'Search the Giphy API for one gif and have the returned gif already copied to your clipboard')
   .example('$0 "your-search-term" -s', 'Search the Giphy API for a set of gifs')
   .example('$0 "your-search-term" -s -l=20', 'Search the Giphy API for a set of 20 gifs')
-  .usage("\nGif it to me! \n" + pkg.version + "\n$0 \"your-search-term\" --search --limit=10")
+  .usage("\nGif it to me! \nv" + pkg.version + "\n$0 \"your-search-term\" --search --limit=10")
   .alias('l', 'limit')
   .alias('s', 'search')
   .alias('v', 'version')
