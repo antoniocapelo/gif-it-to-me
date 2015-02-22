@@ -1,8 +1,8 @@
 {
-  "name": "gifme",
+  "name": "gifit2me",
   "version": "0.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "gifit2me.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
