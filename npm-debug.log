@@ -1,0 +1,103 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'publish', './' ]
+2 info using npm@2.4.1
+3 info using node@v0.10.35
+4 verbose publish [ './' ]
+5 silly cache add args [ './', null ]
+6 verbose cache add spec ./
+7 silly cache add parsed spec { raw: './',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: './',
+7 silly cache add   spec: '/Users/capelo/coding/GitHub Repos/gif-it-to-me',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /Users/capelo/.npm/gifit2me/0.0.1/package.tgz not in flight; packing
+9 verbose tar pack [ '/Users/capelo/.npm/gifit2me/0.0.1/package.tgz',
+9 verbose tar pack   '/Users/capelo/coding/GitHub Repos/gif-it-to-me' ]
+10 verbose tarball /Users/capelo/.npm/gifit2me/0.0.1/package.tgz
+11 verbose folder /Users/capelo/coding/GitHub Repos/gif-it-to-me
+12 info prepublish gifit2me@0.0.1
+13 verbose addLocalTarball adding from inside cache /Users/capelo/.npm/gifit2me/0.0.1/package.tgz
+14 silly cache afterAdd gifit2me@0.0.1
+15 verbose afterAdd /Users/capelo/.npm/gifit2me/0.0.1/package/package.json not in flight; writing
+16 verbose afterAdd /Users/capelo/.npm/gifit2me/0.0.1/package/package.json written
+17 silly publish { author: { name: 'António Capelo', email: 'antonio.c.capelo@gmail.com' },
+17 silly publish   bin: { gifit2me: 'gifit2me.js' },
+17 silly publish   dependencies:
+17 silly publish    { 'copy-paste': '^1.0.1',
+17 silly publish      lodash: '^3.0.0',
+17 silly publish      request: '^2.51.0',
+17 silly publish      yargs: '^1.3.3' },
+17 silly publish   description: 'Node tool for hitting me with quick reaction gifs based on a search string',
+17 silly publish   keywords: [ 'gif', 'gifs', 'giphy' ],
+17 silly publish   license: 'MIT',
+17 silly publish   main: 'gifit2me.js',
+17 silly publish   name: 'gifit2me',
+17 silly publish   preferGlobal: true,
+17 silly publish   readmeFilename: 'README.md',
+17 silly publish   repository:
+17 silly publish    { type: 'git',
+17 silly publish      url: 'https://github.com/antoniocapelo/gif-it-to-me' },
+17 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
+17 silly publish   version: '0.0.1',
+17 silly publish   readme: '# GIF it to me\nNode tool for hitting me with quick reaction gifs based on a search string\n\nThis is a very simple CLI, I made it because I found myself constantly switching from my current terminal to a browser page to search for a specific reaction gif. With gifit2me I can query the [giphy API](https://api.giphy.com/) and save some time, so I thought I\'d share it.\n\n## Installation\n\nThe usual, run ``npm install gifit2me -g`` and you can call ``gifit2me`` from anywhere in a terminal.\n\n## Usage\n\n    gifit2me "your-search-term" [--search] [--limit=10]\n\n## Examples\n\n    gifit2me "your-search-term"             Search the Giphy API for one gif and have the returned gif already copied to your clipboard\n    gifit2me "your-search-term" -s          Search the Giphy API for a set of gifs\n    gifit2me "your-search-term" -s -l=20    Search the Giphy API for a set of 20 gifs\n\n## Options\n\n    * -v, --version  Show version number\n    * -l, --limit    Set search limit (default = 10)\n    * -s, --search   Activate search mode (returns a set of gifs instead of single one)\n',
+17 silly publish   gitHead: 'd799ba9816d5276c76e6ea7d43ea3615ab07be48',
+17 silly publish   bugs: { url: 'https://github.com/antoniocapelo/gif-it-to-me/issues' },
+17 silly publish   homepage: 'https://github.com/antoniocapelo/gif-it-to-me',
+17 silly publish   _id: 'gifit2me@0.0.1',
+17 silly publish   _shasum: 'b66570332d75062febe8d8a42fe2031b050ac599',
+17 silly publish   _from: '.' }
+18 silly mapToRegistry name gifit2me
+19 silly mapToRegistry using default registry
+20 silly mapToRegistry registry https://registry.npmjs.org/
+21 silly mapToRegistry uri https://registry.npmjs.org/gifit2me
+22 verbose publish registryBase https://registry.npmjs.org/
+23 silly publish uploading /Users/capelo/.npm/gifit2me/0.0.1/package.tgz
+24 verbose request uri https://registry.npmjs.org/gifit2me
+25 verbose request sending authorization for write operation
+26 info attempt registry request try #1 at 18:00:48
+27 verbose request id dc78a8227773d81c
+28 http request PUT https://registry.npmjs.org/gifit2me
+29 http 403 https://registry.npmjs.org/gifit2me
+30 verbose headers { date: 'Sun, 01 Mar 2015 18:00:49 GMT',
+30 verbose headers   server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+30 verbose headers   'content-type': 'application/json',
+30 verbose headers   'cache-control': 'max-age=60',
+30 verbose headers   'content-length': '3966',
+30 verbose headers   'accept-ranges': 'bytes',
+30 verbose headers   via: '1.1 varnish',
+30 verbose headers   'x-served-by': 'cache-lcy1126-LCY',
+30 verbose headers   'x-cache': 'MISS',
+30 verbose headers   'x-cache-hits': '0',
+30 verbose headers   'x-timer': 'S1425232849.228491,VS0,VE613',
+30 verbose headers   'keep-alive': 'timeout=10, max=50',
+30 verbose headers   connection: 'Keep-Alive' }
+31 verbose request invalidating /Users/capelo/.npm/registry.npmjs.org/gifit2me on PUT
+32 error publish Failed PUT 403
+33 verbose stack Error: forbidden cannot modify pre-existing version: 0.0.1
+33 verbose stack old={"author":{"name":"António Capelo","email":"antonio.c.capelo@gmail.com"},"bin":{"gifit2me":"gifit2me.js"},"dependencies":{"copy-paste":"^1.0.1","lodash":"^3.0.0","request":"^2.51.0","yargs":"^1.3.3"},"description":"node tool for hitting me with quick reaction gifs based on a search string","keywords":["gif","gifs","giphy"],"license":"MIT","main":"gifit2me.js","name":"gifit2me","preferGlobal":true,"repository":{"type":"git","url":"https://github.com/antoniocapelo/gif-it-to-me"},"scripts":{"test":"echo \"Error: no test specified\" && exit 1"},"version":"0.0.1","gitHead":"baa3b13ad0b882abc1883f6b617da84e01b2b42f","bugs":{"url":"https://github.com/antoniocapelo/gif-it-to-me/issues"},"homepage":"https://github.com/antoniocapelo/gif-it-to-me","_id":"gifit2me@0.0.1","_shasum":"22fe4ea3628f2e042953383d95a7bbb340f2a1e7","_from":".","_npmVersion":"2.4.1","_nodeVersion":"0.10.35","_npmUser":{"name":"capelo","email":"antonio.c.capelo@gmail.com"},"maintainers":[{"name":"capelo","email":"antonio.c.capelo@gmail.com"}],"dist":{"shasum":"22fe4ea3628f2e042953383d95a7bbb340f2a1e7","tarball":"http://registry.npmjs.org/gifit2me/-/gifit2me-0.0.1.tgz"}}
+33 verbose stack new={"author":{"name":"António Capelo","email":"antonio.c.capelo@gmail.com"},"bin":{"gifit2me":"gifit2me.js"},"dependencies":{"copy-paste":"^1.0.1","lodash":"^3.0.0","request":"^2.51.0","yargs":"^1.3.3"},"description":"Node tool for hitting me with quick reaction gifs based on a search string","keywords":["gif","gifs","giphy"],"license":"MIT","main":"gifit2me.js","name":"gifit2me","preferGlobal":true,"readmeFilename":"README.md","repository":{"type":"git","url":"https://github.com/antoniocapelo/gif-it-to-me"},"scripts":{"test":"echo \"Error: no test specified\" && exit 1"},"version":"0.0.1","readme":"# GIF it to me\u000aNode tool for hitting me with quick reaction gifs based on a search string\u000a\u000aThis is a very simple CLI, I made it because I found myself constantly switching from my current terminal to a browser page to search for a specific reaction gif. With gifit2me I can query the [giphy API](https://api.giphy.com/) and save some time, so I thought I'd share it.\u000a\u000a## Installation\u000a\u000aThe usual, run ``npm install gifit2me -g`` and you can call ``gifit2me`` from anywhere in a terminal.\u000a\u000a## Usage\u000a\u000a    gifit2me \"your-search-term\" [--search] [--limit=10]\u000a\u000a## Examples\u000a\u000a    gifit2me \"your-search-term\"             Search the Giphy API for one gif and have the returned gif already copied to your clipboard\u000a    gifit2me \"your-search-term\" -s          Search the Giphy API for a set of gifs\u000a    gifit2me \"your-search-term\" -s -l=20    Search the Giphy API for a set of 20 gifs\u000a\u000a## Options\u000a\u000a    * -v, --version  Show version number\u000a    * -l, --limit    Set search limit (default = 10)\u000a    * -s, --search   Activate search mode (returns a set of gifs instead of single one)\u000a","gitHead":"d799ba9816d5276c76e6ea7d43ea3615ab07be48","bugs":{"url":"https://github.com/antoniocapelo/gif-it-to-me/issues"},"homepage":"https://github.com/antoniocapelo/gif-it-to-me","_id":"gifit2me@0.0.1","_shasum":"b66570332d75062febe8d8a42fe2031b050ac599","_from":".","_npmVersion":"2.4.1","_nodeVersion":"0.10.35","_npmUser":{"name":"capelo","email":"antonio.c.capelo@gmail.com"},"maintainers":[{"name":"capelo","email":"antonio.c.capelo@gmail.com"}],"dist":{"shasum":"b66570332d75062febe8d8a42fe2031b050ac599","tarball":"http://registry.npmjs.org/gifit2me/-/gifit2me-0.0.1.tgz"}}: gifit2me
+33 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:254:14)
+33 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:178:14)
+33 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:373:22)
+33 verbose stack     at Request.emit (events.js:98:17)
+33 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1318:14)
+33 verbose stack     at Request.emit (events.js:117:20)
+33 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1266:12)
+33 verbose stack     at IncomingMessage.emit (events.js:117:20)
+33 verbose stack     at _stream_readable.js:944:16
+33 verbose stack     at process._tickCallback (node.js:442:13)
+34 verbose statusCode 403
+35 verbose pkgid gifit2me
+36 verbose cwd /Users/capelo/coding/GitHub Repos/gif-it-to-me
+37 error Darwin 14.0.0
+38 error argv "node" "/usr/local/bin/npm" "publish" "./"
+39 error node v0.10.35
+40 error npm  v2.4.1
+41 error code E403
+42 error forbidden cannot modify pre-existing version: 0.0.1
+42 error old={"author":{"name":"António Capelo","email":"antonio.c.capelo@gmail.com"},"bin":{"gifit2me":"gifit2me.js"},"dependencies":{"copy-paste":"^1.0.1","lodash":"^3.0.0","request":"^2.51.0","yargs":"^1.3.3"},"description":"node tool for hitting me with quick reaction gifs based on a search string","keywords":["gif","gifs","giphy"],"license":"MIT","main":"gifit2me.js","name":"gifit2me","preferGlobal":true,"repository":{"type":"git","url":"https://github.com/antoniocapelo/gif-it-to-me"},"scripts":{"test":"echo \"Error: no test specified\" && exit 1"},"version":"0.0.1","gitHead":"baa3b13ad0b882abc1883f6b617da84e01b2b42f","bugs":{"url":"https://github.com/antoniocapelo/gif-it-to-me/issues"},"homepage":"https://github.com/antoniocapelo/gif-it-to-me","_id":"gifit2me@0.0.1","_shasum":"22fe4ea3628f2e042953383d95a7bbb340f2a1e7","_from":".","_npmVersion":"2.4.1","_nodeVersion":"0.10.35","_npmUser":{"name":"capelo","email":"antonio.c.capelo@gmail.com"},"maintainers":[{"name":"capelo","email":"antonio.c.capelo@gmail.com"}],"dist":{"shasum":"22fe4ea3628f2e042953383d95a7bbb340f2a1e7","tarball":"http://registry.npmjs.org/gifit2me/-/gifit2me-0.0.1.tgz"}}
+42 error new={"author":{"name":"António Capelo","email":"antonio.c.capelo@gmail.com"},"bin":{"gifit2me":"gifit2me.js"},"dependencies":{"copy-paste":"^1.0.1","lodash":"^3.0.0","request":"^2.51.0","yargs":"^1.3.3"},"description":"Node tool for hitting me with quick reaction gifs based on a search string","keywords":["gif","gifs","giphy"],"license":"MIT","main":"gifit2me.js","name":"gifit2me","preferGlobal":true,"readmeFilename":"README.md","repository":{"type":"git","url":"https://github.com/antoniocapelo/gif-it-to-me"},"scripts":{"test":"echo \"Error: no test specified\" && exit 1"},"version":"0.0.1","readme":"# GIF it to me\u000aNode tool for hitting me with quick reaction gifs based on a search string\u000a\u000aThis is a very simple CLI, I made it because I found myself constantly switching from my current terminal to a browser page to search for a specific reaction gif. With gifit2me I can query the [giphy API](https://api.giphy.com/) and save some time, so I thought I'd share it.\u000a\u000a## Installation\u000a\u000aThe usual, run ``npm install gifit2me -g`` and you can call ``gifit2me`` from anywhere in a terminal.\u000a\u000a## Usage\u000a\u000a    gifit2me \"your-search-term\" [--search] [--limit=10]\u000a\u000a## Examples\u000a\u000a    gifit2me \"your-search-term\"             Search the Giphy API for one gif and have the returned gif already copied to your clipboard\u000a    gifit2me \"your-search-term\" -s          Search the Giphy API for a set of gifs\u000a    gifit2me \"your-search-term\" -s -l=20    Search the Giphy API for a set of 20 gifs\u000a\u000a## Options\u000a\u000a    * -v, --version  Show version number\u000a    * -l, --limit    Set search limit (default = 10)\u000a    * -s, --search   Activate search mode (returns a set of gifs instead of single one)\u000a","gitHead":"d799ba9816d5276c76e6ea7d43ea3615ab07be48","bugs":{"url":"https://github.com/antoniocapelo/gif-it-to-me/issues"},"homepage":"https://github.com/antoniocapelo/gif-it-to-me","_id":"gifit2me@0.0.1","_shasum":"b66570332d75062febe8d8a42fe2031b050ac599","_from":".","_npmVersion":"2.4.1","_nodeVersion":"0.10.35","_npmUser":{"name":"capelo","email":"antonio.c.capelo@gmail.com"},"maintainers":[{"name":"capelo","email":"antonio.c.capelo@gmail.com"}],"dist":{"shasum":"b66570332d75062febe8d8a42fe2031b050ac599","tarball":"http://registry.npmjs.org/gifit2me/-/gifit2me-0.0.1.tgz"}}: gifit2me
+43 error If you need help, you may report this error at:
+43 error     <http://github.com/npm/npm/issues>
+44 verbose exit [ 1, true ]
