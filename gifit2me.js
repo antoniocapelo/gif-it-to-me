@@ -63,6 +63,7 @@ function detectStuff() {
 }
 
 function launchServer() {
+    console.log('launch server');
   server = http.createServer(function(request, response) {
     makeRequest(response);
   });
@@ -103,6 +104,7 @@ function writeResponse(response, gifArray) {
 
 
 function makeRequest(serverResponse) {
+    console.log('yo');
   request({
     url: baseUrl,
     qs: {

@@ -1,17 +1,34 @@
 {
-  "name": "gifit2me",
-  "version": "0.0.1",
-  "description": "",
-  "main": "gifit2me.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "copy-paste": "^1.0.1",
-    "lodash": "^3.0.0",
-    "request": "^2.51.0",
-    "yargs": "^1.3.3"
-  }
+    "author": {
+        "email": "antonio.c.capelo@gmail.com",
+        "name": "Ant\u00f3nio Capelo"
+    },
+    "bin": {
+        "gifit2me": "gifit2me.js"
+    },
+    "dependencies": {
+        "copy-paste": "^1.0.1",
+        "lodash": "^3.0.0",
+        "request": "^2.51.0",
+        "yargs": "^1.3.3"
+    },
+    "description": "",
+    "keywords": [
+        "gif",
+        "gifs",
+        "giphy"
+    ],
+    "license": "MIT",
+    "main": "gifit2me.js",
+    "name": "gifit2me",
+    "preferGlobal": true,
+    "readmeFilename": "README.md",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/antoniocapelo/gif-it-to-me"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "version": "0.0.1"
 }
